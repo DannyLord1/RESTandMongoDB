@@ -7,7 +7,7 @@ const router = express.Router();
 
 /* GET users listing. */
 router.route('/')
-get((authenticate.verifyUser, authenticate.verifyAdmin, (req, res, next) => {
+.get((authenticate.verifyUser, authenticate.verifyAdmin, (req, res, next) => {
     User.find()
     .then(users => {
         res.statusCode = 200;
